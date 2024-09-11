@@ -2,11 +2,14 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>@yield('title', 'Yurnails')</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{{ asset('assets/gold-version-isotype.ico') }}" type="image/x-icon">
 </head>
+
 <body>
     <div class="header">
         <a href="/"><img class="logo-header" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails"></a>
@@ -19,12 +22,21 @@
         </nav>
     </div>
 
-    <div class="content">
+    <div class="main-content">
         @yield('content')
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Yurnails. </p>
+        <div class="footer-content">
+            <img class="logo-footer" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails">
+            <p>&copy; 2024 Yurnails | All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
