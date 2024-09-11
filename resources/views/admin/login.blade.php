@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login Administrador</title>
-</head>
-<body>
-    <div class="container">
+<!-- resources/views/admin/login.blade.php -->
+
+@extends('layout')
+
+@section('title', 'Admin Login')
+
+@section('content')
+    <div>
         <h2>Login Administrador</h2>
 
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
-            </div>
-        @endif
-
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
             </div>
         @endif
 
@@ -35,6 +26,15 @@
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
-</body>
-</html>
+@endsection

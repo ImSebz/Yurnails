@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registro Administrador</title>
-</head>
-<body>
-    <div class="container">
+{{-- <!-- resources/views/admin/register.blade.php -->
+
+@extends('layout')
+
+@section('title', 'Registro Administrador')
+
+@section('content')
+    <div class="">
         <h2>Registro Administrador</h2>
 
         @if (session('success'))
@@ -12,17 +13,6 @@
                 {{ session('success') }}
             </div>
         @endif
-
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <form action="{{ route('admin.register.submit') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -43,6 +33,14 @@
             </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     </div>
-</body>
-</html>
+@endsection --}}

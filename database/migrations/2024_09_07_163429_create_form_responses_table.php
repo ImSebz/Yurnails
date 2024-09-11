@@ -9,7 +9,15 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('age');
+            $table->string('phone');
+            $table->text('skills_interested');
+            $table->text('specializations_interested');
+            $table->text('course_certification_importance');
+            $table->text('course_format_preference');
+            $table->text('support_mentorship_expectation');
+            $table->string('course_budget');
+            $table->text('long_term_goals');
+            $table->text('prior_experience');
             $table->timestamps();
         });
     }

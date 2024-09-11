@@ -12,7 +12,7 @@ class AdminLoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Autenticación exitosa
-            return redirect()->intended('/admin/dashboard')->with('success', 'Login exitoso');
+            return redirect()->intended('admin/dashboard')->with('success', 'Login exitoso');
         }
 
         // Autenticación fallida

@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-</head>
-<body>
-    <div class="header">
-        <a href="/"><img src="{{ asset('img/logo.png') }}" alt="Yurnails"></a>
-        <nav>
-            <ul>
-                <li><a href="/form">Formulario</a></li>
-                <li><a href="/admin/login">Login Administrador</a></li>
-                <li><a href="/admin/register">Registro Administrador</a></li>
-            </ul>
-        </nav>
-    </div>
-    <h1>Bienvenido a Yurnails</h1>
+<!-- resources/views/landing.blade.php -->
+
+@extends('layout')
+
+@section('title', 'Yurlails')
+
+@section('content')
+    <h2>Bienvenido a Yurnails</h2>
     <p>Información sobre Yurnails...</p>
-    <div class="footer"></div>
-</body>
-</html>
+    <a href="/form"><button>Sign up</button></a>
+@endsection

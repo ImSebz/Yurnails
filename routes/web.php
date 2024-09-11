@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormResponseController;
 use App\Http\Controllers\AdminRegisterController;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\AdminDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\AdminLoginController;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('home');
 
 Route::get('/form', [FormResponseController::class, 'create']);
 Route::post('/form', [FormResponseController::class, 'store']);
@@ -30,5 +31,7 @@ Route::post('/admin/register', [AdminRegisterController::class, 'register'])->na
 
 Route::get('/admin/login', function () {
     return view('admin.login');
-});
+})->name('admin.login');
 Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
+
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->middleware('admin.auth')->name('admin.dashboard');

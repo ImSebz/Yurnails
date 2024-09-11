@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-blue: #C3D7EE;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
-    background-color: #6D0B79;
+    padding: 0px 40px;
+    background-color: var(--primary-blue);
 }
 
 .header nav {
@@ -24,9 +31,88 @@
 
 .header nav ul li {
     margin-right: 20px;
+    font-size: 1.1rem;
 }
 
 .header nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
+    font-weight: 600;
 }
+
+.logo-header {
+    width: 100px;
+}
+
+
+/* Table Admin Dashboard */
+
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination-dashboard {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination-dashboard .page-item {
+    margin: 0 4px;
+    list-style: none;
+}
+
+.pagination-dashboard .page-link {
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination-dashboard .page-link:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination-dashboard .active .page-link {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+}
+
