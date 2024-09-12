@@ -12,7 +12,7 @@
 
 <body>
     <div class="header">
-        <a href="/"><img class="logo-header" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails"></a>
+        <a href="/"><img class="logo-header" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails Logo"></a>
         <nav>
             <ul>
                 <li><a href="/form">Formulario</a></li>
@@ -28,12 +28,12 @@
 
     <div class="footer">
         <div class="footer-content">
-            <img class="logo-footer" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails">
+            <img class="logo-footer" src="{{ asset('assets/main-gold-yurnails.png') }}" alt="Yurnails Logo">
             <p>&copy; 2024 Yurnails | All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@yurnails" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/yurnails" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/yurnailssupport" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
     </div>
