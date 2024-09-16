@@ -5,7 +5,11 @@
 @section('title', 'Yurlails')
 
 @section('content')
-    <h2>Bienvenido a Yurnails</h2>
-    <p>Información sobre Yurnails...</p>
-    <a href="/form"><button>Sign up</button></a>
+    <div class="landing-container">
+        <div class="landing-right-container">
+            <h2 class="landing-title">Nail Workshop</h2>
+            <img class="img-logo-landing" src="{{ asset('assets/logo-nails-academy.png') }}" alt="">
+            <a href="/form"><button class="sing-btn">Sign up</button></a>
+        </div>
+    </div>
 @endsection

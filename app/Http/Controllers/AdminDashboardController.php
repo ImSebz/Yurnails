@@ -10,7 +10,7 @@ class AdminDashboardController extends Controller
 {
     public function index()
     {
-        $formResponses = FormResponse::paginate(5)->onEachSide(1);
+        $formResponses = FormResponse::paginate(10)->onEachSide(1);
         return view('admin.dashboard', compact('formResponses'));
     }
 }

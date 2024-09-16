@@ -5,7 +5,7 @@
 @section('title', 'Form')
 
 @section('content')
-    <h2>Form</h2>
+    <h2>Contact us</h2>
     <form action="/form" method="POST">
         @csrf
         <label for="name">Name:</label>
