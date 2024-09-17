@@ -14,7 +14,8 @@ class FormResponseController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'first-name' => 'required|string|max:255',
+            'last-name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:form_responses',
             'phone' => 'required|string|max:20',
             'skills_interested' => 'required|string',
@@ -27,8 +28,10 @@ class FormResponseController extends Controller
             'prior_experience' => 'required|string',
         ]);
 
+        $name = $request->input('first-name') . ' ' . $request->input('last-name');
+
         FormResponse::create([
-            'name' => $request->name,
+            'name' => $name,
             'email' => $request->email,
             'phone' => $request->phone,
             'skills_interested' => $request->skills_interested,
