@@ -2,7 +2,7 @@
 
 @extends('layout')
 
-@section('title', 'Yurlails')
+@section('title', 'Yurnails')
 
 @section('content')
     <div class="landing-container">
