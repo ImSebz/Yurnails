@@ -1,4 +1,4 @@
-{{-- <!-- resources/views/admin/register.blade.php -->
+<!-- resources/views/admin/register.blade.php -->
 
 @extends('layout')
 
@@ -43,4 +43,4 @@
         </div>
     @endif
     </div>
-@endsection --}}
+@endsection
